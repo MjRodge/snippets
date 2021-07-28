@@ -2,17 +2,27 @@
 <html>
   <head>
     <title>html-get-url function</title>
+    <script type="text/javascript">
+      function onloadUrl() {
+        document.getElementById("onload-output").innerHTML = window.location.href; 
+      }
+      </script>
   </head>
-  <body>
+  <body onload="onloadUrl()">
     <h1>html-get-url function</h1>
-    <p>press button below to output url:</p>
-    <button onclick="getUrl()">press it</button> 
 
-    <p id="output">text will change here hopefully</p>
+    <h2>onclick</h2>
+    <p>press button below to output url:</p>
+    <button onclick="clickUrl()">press it</button> 
+    <p id="click-output">text will change here hopefully</p>
+
+    <h2>onload</h2>
+    <p>the text below will say _failed function_ if not successfully updated on load</p>
+    <p id="onload-output">failed function</p>
 
     <script>
-      function getUrl() {
-        document.getElementById("output").innerHTML = window.location.href;
+      function clickUrl() {
+        document.getElementById("click-output").innerHTML = window.location.href;
       } 
       </script>
   </body>
