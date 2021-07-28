@@ -5,6 +5,15 @@
   </head>
   <body>
     <h1>html-get-url function</h1>
-    <p>boilerplate.</p>  
+    <p>press button below to output url:</p>
+    <button onclick="getUrl()">press it</button> 
+
+    <p id="output">text will change here hopefully</p>
+
+    <script>
+      function getUrl() {
+        document.getElementById("output").innerHTML = "YOU CLICKED ME!";
+      } 
+      </script>
   </body>
 </html>
